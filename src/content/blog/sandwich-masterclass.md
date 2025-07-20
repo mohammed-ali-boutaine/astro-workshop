@@ -2,7 +2,7 @@
 title: 'The Art of Sandwich Making: A Master Class'
 description: 'Learn the fundamental techniques that transform simple ingredients into extraordinary sandwiches'
 date: 2025-01-20
-image: '/blog-images/test.jpg'
+image: '/sandwich-masterclass.jpg'
 draft: false
 ---
 

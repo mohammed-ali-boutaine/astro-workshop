@@ -2,7 +2,7 @@
 title: 'Hosting the Perfect Moroccan Dinner'
 description: 'A complete guide to creating an authentic Moroccan dining experience at home'
 date: 2025-01-05
-image: '/blog-images/test.jpg'
+image: '/moroccan-dinner.jpg'
 draft: false
 ---
 

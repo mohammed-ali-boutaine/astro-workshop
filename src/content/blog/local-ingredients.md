@@ -2,7 +2,7 @@
 title: '5 Local Ingredients That Inspire Our Menu'
 description: 'Discover the local ingredients that drive our seasonal menu and connect us to our community'
 date: 2025-01-10
-image: '/blog-images/test.jpg'
+image: '/ingredients.jpg'
 draft: false
 ---
 

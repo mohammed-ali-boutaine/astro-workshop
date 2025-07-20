@@ -2,7 +2,7 @@
 title: 'How We Make Our Signature Pasta'
 description: 'Behind the scenes of our handmade pasta process and the secrets that make it special'
 date: 2025-01-15
-image: '/blog-images/test.jpg'
+image: '/signature-pasta.jpg'
 draft: false
 ---
 

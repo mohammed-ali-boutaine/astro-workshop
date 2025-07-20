@@ -1,1 +1,0 @@
-https://github.com/mohammed-ali-boutaine/astro-workshop.git
