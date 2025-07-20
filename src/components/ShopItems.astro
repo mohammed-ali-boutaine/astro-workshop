@@ -1,0 +1,232 @@
+---
+import AddToCartButton from "./AddToCartButton";
+import type { ShopItem } from "../types";
+
+interface Props {
+     count?: number;
+     addToCartButton?: boolean;
+}
+
+const { count = Infinity, addToCartButton = true } = Astro.props as Props;
+
+function formatCurrency(amount: number): string {
+     return new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: 'USD',
+     }).format(amount);
+}
+
+// API endpoint for fetching products
+const API_URL = "https://astro-frontend-masters-api.netlify.app/api/products";
+
+let shopItems: ShopItem[] = [];
+let hasError = false;
+
+try {
+     const response = await fetch(API_URL);
+     if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+     }
+     shopItems = await response.json();
+} catch (error) {
+     console.error('Failed to fetch shop items:', error);
+     hasError = true;
+}
+
+---
+
+<div class="shop-items">
+     {hasError ? (
+          <div class="error-message">
+               <p>Sorry, we're having trouble loading products right now.</p>
+          </div>
+     ) : shopItems.length === 0 ? (
+          <div class="loading-message">
+               <div class="spinner"></div>
+               <p>Loading products...</p>
+          </div>
+     ) : (
+          shopItems.reverse().slice(0, count).map((item) => (
+               <article class="item" itemscope itemtype="https://schema.org/Product">
+                    <div class="item-image">
+                         <img 
+                              src={item.image.src} 
+                              alt={item.image.alt}
+                              loading="lazy"
+                              itemprop="image"
+                         />
+                    </div>
+                    <div class="item-content">
+                         <h3 class="item-title" itemprop="name">{item.title}</h3>
+                         <p class="item-description" itemprop="description">{item.description}</p>
+                         <div class="item-footer">
+                              <span class="price" itemprop="price" data-content={item.price.toString()}>
+                                   {formatCurrency(item.price)}
+                              </span>
+                              {addToCartButton && (
+                                   <AddToCartButton client:load product={item} />
+                              )}
+                         </div>
+                    </div>
+               </article>
+          ))
+     )}
+</div>
+
+
+
+<style>
+.shop-items {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+     gap: 15px;
+     padding: 2rem 0;
+     max-width: 1200px;
+     margin: 0 auto;
+}
+
+/* Force 3 columns when exactly 3 items are shown (home page) */
+.shop-items:has(.item:nth-child(3):last-child) {
+     grid-template-columns: repeat(3, 1fr);
+}
+
+.error-message, .loading-message {
+     grid-column: 1 / -1;
+     text-align: center;
+     padding: 3rem;
+     background: var(--color-gray-100);
+     border-radius: 0.5rem;
+     color: var(--color-gray-700);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 1rem;
+}
+
+.spinner {
+     width: 40px;
+     height: 40px;
+     border: 4px solid var(--color-gray-200);
+     border-top: 4px solid var(--color-gray-900);
+     border-radius: 50%;
+     animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+     0% { transform: rotate(0deg); }
+     100% { transform: rotate(360deg); }
+}
+
+.item {
+     background: white;
+     border-radius: 8px;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+     transition: all 0.3s ease;
+     overflow: hidden;
+     position: relative;
+         display: flex
+;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.item:hover {
+     transform: translateY(-4px);
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.item-image {
+     position: relative;
+     overflow: hidden;
+}
+
+.item img {
+     aspect-ratio: 4/3;
+     width: 100%;
+    height: 240px;
+     object-fit: cover;
+     transition: transform 0.3s ease;
+}
+
+.item:hover img {
+     transform: scale(1.05);
+}
+
+.item-content {
+     padding: 1.5rem;
+     display: flex;
+     flex-direction: column;
+     gap: 0.75rem;
+     /* height: 100%; */
+}
+
+.item-title {
+     font-size: 1.25rem;
+     font-weight: 700;
+     margin: 0;
+     color: var(--color-gray-900);
+     line-height: 1.3;
+}
+
+.item-description {
+     margin: 0;
+     color: var(--color-gray-600);
+     line-height: 1.5;
+     /* flex-grow: 1; */
+}
+
+.item-footer {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 1rem;
+     /* margin-top: auto; */
+}
+
+.price {
+     font-size: 1.5rem;
+     font-weight: 700;
+     color: var(--color-gray-900);
+     font-family: 'DynaPuff', cursive;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+     .shop-items:has(.item:nth-child(3):last-child) {
+          grid-template-columns: repeat(2, 1fr);
+     }
+}
+
+@media (max-width: 640px) {
+     .shop-items {
+          grid-template-columns: 1fr;
+          padding: 1rem;
+          gap: 15px;
+     }
+     
+     .item-content {
+          padding: 1.25rem;
+     }
+     
+     .item-footer {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0.75rem;
+     }
+     
+     .price {
+          text-align: center;
+          font-size: 1.25rem;
+     }
+}
+
+@media (min-width: 1400px) {
+     .shop-items {
+          grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+     }
+     
+     .shop-items:has(.item:nth-child(3):last-child) {
+          grid-template-columns: repeat(3, 1fr);
+     }
+}
+</style>

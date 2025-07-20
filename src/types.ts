@@ -12,4 +12,8 @@ type ShopItem = {
 type CartItem = {
 	quantity: number;
 	item: ShopItem;
+	id: number;
 };
+
+
+export type { ShopItem, CartItem };

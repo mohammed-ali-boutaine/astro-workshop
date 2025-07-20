@@ -1,0 +1,126 @@
+---
+const links = [
+	{ label: "Shop", path: "/shop" },
+	{ label: "Blog", path: "/blog" },
+	{ label: "About", path: "/about" },
+	{ label: "Contact", path: "/contact" },
+];
+
+// Get current path to highlight active link
+const currentPath = Astro.url.pathname;
+---
+
+<header>
+	<a href="/" rel="home">
+		<span role="img" aria-label="hotdog">🌭</span>
+		Savory 
+	</a>
+
+	<nav>
+		{links.map((link) => (
+			<a 
+				href={link.path} 
+				class={currentPath === link.path ? 'active' : ''}
+			>
+				{link.label}
+			</a>
+		))}
+	</nav>
+</header>
+
+<style>
+	header {
+		align-items: baseline;
+		background: var(--color-gray-100);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 1rem;
+	}
+
+	a[rel='home'] {
+		color: inherit;
+		font-family: 'DynaPuff', cursive;
+		font-size: 1.5rem;
+		font-weight: 700;
+		text-decoration: none;
+		transition: all 0.3s ease;
+	}
+
+	a[rel='home']:hover {
+		color: var(--color-gray-700);
+		transform: translateY(-2px);
+	}
+
+	nav {
+		display: flex;
+		gap: 1rem;
+	}
+
+	nav a {
+		color: inherit;
+		font-size: 1.25rem;
+		font-weight: 700;
+		text-decoration: none;
+		padding: 0.5rem 1rem;
+		border-radius: 8px;
+		transition: all 0.3s ease;
+		position: relative;
+		overflow: hidden;
+	}
+
+	nav a::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+		transition: left 0.5s ease;
+	}
+
+	nav a:hover {
+		background: var(--color-gray-200);
+		color: var(--color-gray-900);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	nav a:hover::before {
+		left: 100%;
+	}
+
+	nav a.active {
+		background: var(--color-gray-700);
+		color: white;
+	}
+
+	nav a.active:hover {
+		background: var(--color-gray-600);
+		color: white;
+	}
+
+	nav a:focus {
+		outline: 2px solid var(--color-gray-900);
+		outline-offset: 2px;
+	}
+
+	@media (min-width: 400px) {
+		header {
+			flex-direction: row;
+		}
+	}
+
+	@media (max-width: 768px) {
+		nav {
+			flex-wrap: wrap;
+			gap: 0.5rem;
+		}
+		
+		nav a {
+			font-size: 1rem;
+			padding: 0.4rem 0.8rem;
+		}
+	}
+</style>

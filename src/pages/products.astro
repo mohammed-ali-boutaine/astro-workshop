@@ -1,0 +1,407 @@
+---
+import Layout from '../layouts/default.astro';
+import Hero from '../components/Hero.astro';
+import ShopItems from '../components/ShopItems.astro';
+---
+
+<Layout>
+	<div class="products-page">
+		<Hero 
+			title="Our Products" 
+			subtitle="Discover our full collection of artisanal sandwich kits, each crafted with premium ingredients and chef-approved recipes." 
+		/>
+
+		<div class="products-container">
+			<section class="featured-section">
+				<h2>Featured Collections</h2>
+				<div class="collections-grid">
+					<div class="collection-card">
+						<div class="collection-image">
+							<img src="/sandwich-hero.jpg" alt="Classic Collection" loading="lazy" />
+						</div>
+						<div class="collection-content">
+							<h3>Classic Collection</h3>
+							<p>Time-tested favorites that never go out of style. Perfect for those who appreciate traditional flavors done right.</p>
+							<ul>
+								<li>Italian Hero</li>
+								<li>Club Sandwich</li>
+								<li>BLT Supreme</li>
+								<li>Grilled Cheese Deluxe</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="collection-card">
+						<div class="collection-image">
+							<img src="/sandwich-hero.jpg" alt="Gourmet Collection" loading="lazy" />
+						</div>
+						<div class="collection-content">
+							<h3>Gourmet Collection</h3>
+							<p>Elevated sandwich experiences featuring premium ingredients and innovative flavor combinations.</p>
+							<ul>
+								<li>Truffle Mushroom Melt</li>
+								<li>Prosciutto & Fig</li>
+								<li>Smoked Salmon Bagel</li>
+								<li>Duck Confit Sandwich</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="collection-card">
+						<div class="collection-image">
+							<img src="/sandwich-hero.jpg" alt="Healthy Collection" loading="lazy" />
+						</div>
+						<div class="collection-content">
+							<h3>Healthy Collection</h3>
+							<p>Nutritious options that don't compromise on taste. Fresh, wholesome ingredients for the health-conscious.</p>
+							<ul>
+								<li>Avocado Toast Deluxe</li>
+								<li>Quinoa Power Bowl</li>
+								<li>Grilled Veggie Wrap</li>
+								<li>Protein-Packed Turkey</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="all-products-section">
+				<h2>All Sandwich Kits</h2>
+				<div class="filter-section">
+					<div class="filter-options">
+						<button class="filter-btn active" data-filter="all">All Products</button>
+						<button class="filter-btn" data-filter="classic">Classic</button>
+						<button class="filter-btn" data-filter="gourmet">Gourmet</button>
+						<button class="filter-btn" data-filter="healthy">Healthy</button>
+						<button class="filter-btn" data-filter="vegetarian">Vegetarian</button>
+					</div>
+				</div>
+				<ShopItems addToCartButton={true} />
+			</section>
+
+			<section class="features-section">
+				<h2>What Makes Our Products Special</h2>
+				<div class="features-grid">
+					<div class="feature-item">
+						<div class="feature-icon">🥖</div>
+						<h3>Fresh Bread Daily</h3>
+						<p>Our artisanal breads are baked fresh every morning using traditional techniques and premium flour.</p>
+					</div>
+					<div class="feature-item">
+						<div class="feature-icon">🧀</div>
+						<h3>Premium Ingredients</h3>
+						<p>We source only the finest cheeses, meats, and produce from trusted local and international suppliers.</p>
+					</div>
+					<div class="feature-item">
+						<div class="feature-icon">👨‍🍳</div>
+						<h3>Chef-Curated Recipes</h3>
+						<p>Each sandwich kit comes with detailed instructions from our professional chefs for the perfect result.</p>
+					</div>
+					<div class="feature-item">
+						<div class="feature-icon">📦</div>
+						<h3>Ready to Assemble</h3>
+						<p>Everything you need arrives perfectly portioned and ready to create your gourmet sandwich at home.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="quality-section">
+				<div class="quality-content">
+					<div class="quality-text">
+						<h2>Our Quality Promise</h2>
+						<p>
+							Every sandwich kit is carefully curated and tested by our culinary team. We believe that exceptional sandwiches start with exceptional ingredients, which is why we partner with local farms and artisanal producers who share our commitment to quality.
+						</p>
+						<div class="quality-points">
+							<div class="point">
+								<span class="point-icon">✓</span>
+								<span>100% fresh ingredients, delivered within 24 hours</span>
+							</div>
+							<div class="point">
+								<span class="point-icon">✓</span>
+								<span>Sustainably sourced from local and trusted suppliers</span>
+							</div>
+							<div class="point">
+								<span class="point-icon">✓</span>
+								<span>Detailed recipe cards with chef tips and techniques</span>
+							</div>
+							<div class="point">
+								<span class="point-icon">✓</span>
+								<span>Satisfaction guarantee - love it or we'll make it right</span>
+							</div>
+						</div>
+					</div>
+					<div class="quality-image">
+						<img src="/sandwich-hero.jpg" alt="Quality ingredients being prepared" loading="lazy" />
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.products-page {
+		min-height: 80vh;
+	}
+
+	.products-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 4rem 2rem;
+	}
+
+	section {
+		margin-bottom: 5rem;
+	}
+
+	section h2 {
+		font-family: 'DynaPuff', cursive;
+		font-size: 2.5rem;
+		margin: 0 0 3rem 0;
+		color: var(--color-gray-900);
+		text-align: center;
+	}
+
+	/* Collections Grid */
+	.collections-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+	}
+
+	.collection-card {
+		background: white;
+		border-radius: 12px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		overflow: hidden;
+		border: 1px solid var(--color-gray-200);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.collection-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+	}
+
+	.collection-image img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	}
+
+	.collection-content {
+		padding: 2rem;
+	}
+
+	.collection-content h3 {
+		font-size: 1.5rem;
+		margin: 0 0 1rem 0;
+		color: var(--color-gray-900);
+		font-weight: 600;
+	}
+
+	.collection-content p {
+		color: var(--color-gray-600);
+		line-height: 1.6;
+		margin: 0 0 1.5rem 0;
+	}
+
+	.collection-content ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.collection-content li {
+		color: var(--color-gray-700);
+		padding: 0.25rem 0;
+		padding-left: 1.5rem;
+		position: relative;
+	}
+
+	.collection-content li:before {
+		content: "•";
+		color: var(--color-gray-900);
+		font-weight: bold;
+		position: absolute;
+		left: 0;
+	}
+
+	/* Filter Section */
+	.filter-section {
+		margin-bottom: 3rem;
+		text-align: center;
+	}
+
+	.filter-options {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.filter-btn {
+		background: white;
+		border: 2px solid var(--color-gray-200);
+		border-radius: 25px;
+		padding: 0.5rem 1.5rem;
+		font-size: 1rem;
+		font-weight: 500;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		color: var(--color-gray-700);
+	}
+
+	.filter-btn:hover,
+	.filter-btn.active {
+		background: var(--color-gray-900);
+		color: white;
+		border-color: var(--color-gray-900);
+	}
+
+	/* Features Grid */
+	.features-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.feature-item {
+		text-align: center;
+		padding: 2rem;
+		background: white;
+		border-radius: 12px;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+		border: 1px solid var(--color-gray-200);
+	}
+
+	.feature-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.feature-item h3 {
+		font-size: 1.3rem;
+		margin: 0 0 1rem 0;
+		color: var(--color-gray-900);
+		font-weight: 600;
+	}
+
+	.feature-item p {
+		color: var(--color-gray-600);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	/* Quality Section */
+	.quality-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.quality-text h2 {
+		text-align: left;
+		margin-bottom: 1.5rem;
+	}
+
+	.quality-text p {
+		font-size: 1.1rem;
+		line-height: 1.7;
+		color: var(--color-gray-600);
+		margin-bottom: 2rem;
+	}
+
+	.quality-points {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.point {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.75rem;
+	}
+
+	.point-icon {
+		color: #22c55e;
+		font-weight: bold;
+		font-size: 1.2rem;
+		flex-shrink: 0;
+	}
+
+	.point span:last-child {
+		color: var(--color-gray-700);
+		line-height: 1.5;
+	}
+
+	.quality-image img {
+		width: 100%;
+		height: 400px;
+		object-fit: cover;
+		border-radius: 12px;
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.products-container {
+			padding: 3rem 1rem;
+		}
+
+		section {
+			margin-bottom: 3rem;
+		}
+
+		section h2 {
+			font-size: 2rem;
+		}
+
+		.collections-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.collection-content {
+			padding: 1.5rem;
+		}
+
+		.filter-options {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.filter-btn {
+			width: 200px;
+		}
+
+		.features-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.quality-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.quality-image {
+			order: -1;
+		}
+
+		.quality-image img {
+			height: 250px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.collection-content {
+			padding: 1rem;
+		}
+
+		.feature-item {
+			padding: 1.5rem;
+		}
+	}
+</style>

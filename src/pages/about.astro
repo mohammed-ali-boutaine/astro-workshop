@@ -1,0 +1,390 @@
+---
+import Layout from '../layouts/default.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout>
+	<div class="about-page">
+		<Hero 
+			title="About Savory" 
+			subtitle="Crafting exceptional sandwiches with passion, quality ingredients, and a commitment to flavor perfection since 2017." 
+		/>
+
+		<div class="about-container">
+			<section class="story-section">
+				<h2>Our Story</h2>
+				<div class="story-content">
+					<div class="story-text">
+						<p>
+							Founded in 2017 by a group of culinary enthusiasts, Savory began as a simple dream: to create the perfect sandwich. What started in a small kitchen has grown into a passionate mission to bring exceptional flavors to sandwich lovers everywhere.
+						</p>
+						<p>
+							Our journey began when chef Roberto Silva, fresh from culinary school, met local farmer Maria Rodriguez at a weekend farmers market. Their shared passion for quality ingredients and authentic flavors sparked the idea for Savory - a place where traditional techniques meet innovative flavors.
+						</p>
+						<p>
+							Today, we continue to honor that original vision by sourcing the finest ingredients, perfecting our recipes, and sharing our love for great food with our community.
+						</p>
+					</div>
+					<div class="story-image">
+						<img src="/sandwich-hero.jpg" alt="Fresh sandwich ingredients being prepared" loading="lazy" />
+					</div>
+				</div>
+			</section>
+
+			<section class="values-section">
+				<h2>Our Values</h2>
+				<div class="values-grid">
+					<div class="value-item">
+						<div class="value-icon">🌱</div>
+						<h3>Quality Ingredients</h3>
+						<p>We source only the finest, freshest ingredients from local farms and trusted suppliers. Every component matters in creating the perfect sandwich.</p>
+					</div>
+					<div class="value-item">
+						<div class="value-icon">👨‍🍳</div>
+						<h3>Culinary Excellence</h3>
+						<p>Our chefs bring years of experience and passion to every recipe, constantly innovating while respecting traditional techniques.</p>
+					</div>
+					<div class="value-item">
+						<div class="value-icon">🌍</div>
+						<h3>Community Focus</h3>
+						<p>We believe in supporting our local community, from sourcing ingredients locally to creating jobs and fostering connections.</p>
+					</div>
+					<div class="value-item">
+						<div class="value-icon">♻️</div>
+						<h3>Sustainability</h3>
+						<p>Environmental responsibility guides our practices, from eco-friendly packaging to minimizing food waste.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="team-section">
+				<h2>Meet Our Team</h2>
+				<div class="team-grid">
+					<div class="team-member">
+						<div class="member-photo">
+							<div class="placeholder-photo">RS</div>
+						</div>
+						<h3>Roberto Silva</h3>
+						<p class="role">Head Chef & Co-Founder</p>
+						<p>With 15 years of culinary experience, Roberto brings innovation and passion to every recipe. His specialty is creating unique flavor combinations that surprise and delight.</p>
+					</div>
+					<div class="team-member">
+						<div class="member-photo">
+							<div class="placeholder-photo">MR</div>
+						</div>
+						<h3>Maria Rodriguez</h3>
+						<p class="role">Operations Manager & Co-Founder</p>
+						<p>Maria ensures quality at every step, from ingredient sourcing to customer experience. Her attention to detail keeps Savory running smoothly.</p>
+					</div>
+					<div class="team-member">
+						<div class="member-photo">
+							<div class="placeholder-photo">DT</div>
+						</div>
+						<h3>David Thompson</h3>
+						<p class="role">Pastry Chef</p>
+						<p>David crafts our artisanal breads and pastries daily. His background in European baking techniques adds an authentic touch to our offerings.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="mission-section">
+				<div class="mission-content">
+					<h2>Our Mission</h2>
+					<blockquote>
+						"To create exceptional sandwiches that bring people together, using the finest ingredients and time-honored techniques, while building a sustainable future for our community."
+					</blockquote>
+					<p class="mission-text">
+						Every sandwich we create is a testament to our commitment to quality, flavor, and community. We believe that great food has the power to bring people together, create memories, and brighten someone's day.
+					</p>
+				</div>
+			</section>
+
+			<section class="stats-section">
+				<h2>By the Numbers</h2>
+				<div class="stats-grid">
+					<div class="stat-item">
+						<div class="stat-number">50,000+</div>
+						<div class="stat-label">Sandwiches Crafted</div>
+					</div>
+					<div class="stat-item">
+						<div class="stat-number">25+</div>
+						<div class="stat-label">Local Suppliers</div>
+					</div>
+					<div class="stat-item">
+						<div class="stat-number">8</div>
+						<div class="stat-label">Years of Excellence</div>
+					</div>
+					<div class="stat-item">
+						<div class="stat-number">100%</div>
+						<div class="stat-label">Fresh Daily</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.about-page {
+		min-height: 80vh;
+	}
+
+	.about-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 4rem 2rem;
+	}
+
+	section {
+		margin-bottom: 4rem;
+	}
+
+	section h2 {
+		font-family: 'DynaPuff', cursive;
+		font-size: 2.5rem;
+		margin: 0 0 2rem 0;
+		color: var(--color-gray-900);
+		text-align: center;
+	}
+
+	/* Story Section */
+	.story-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.story-text p {
+		font-size: 1.1rem;
+		line-height: 1.7;
+		color: var(--color-gray-600);
+		margin-bottom: 1.5rem;
+	}
+
+	.story-image img {
+		width: 100%;
+		height: 400px;
+		object-fit: cover;
+		border-radius: 12px;
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+	}
+
+	/* Values Section */
+	.values-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+	}
+
+	.value-item {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+		text-align: center;
+		border: 1px solid var(--color-gray-200);
+	}
+
+	.value-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.value-item h3 {
+		font-size: 1.3rem;
+		margin: 0 0 1rem 0;
+		color: var(--color-gray-900);
+		font-weight: 600;
+	}
+
+	.value-item p {
+		color: var(--color-gray-600);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	/* Team Section */
+	.team-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.team-member {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+		text-align: center;
+		border: 1px solid var(--color-gray-200);
+	}
+
+	.member-photo {
+		width: 120px;
+		height: 120px;
+		margin: 0 auto 1.5rem auto;
+		border-radius: 50%;
+		overflow: hidden;
+		background: var(--color-gray-100);
+	}
+
+	.placeholder-photo {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 2rem;
+		font-weight: 700;
+		color: var(--color-gray-600);
+		background: var(--color-gray-200);
+	}
+
+	.team-member h3 {
+		font-size: 1.4rem;
+		margin: 0 0 0.5rem 0;
+		color: var(--color-gray-900);
+		font-weight: 600;
+	}
+
+	.role {
+		font-weight: 600;
+		color: var(--color-gray-700);
+		margin: 0 0 1rem 0;
+		font-size: 1rem;
+	}
+
+	.team-member p:not(.role) {
+		color: var(--color-gray-600);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	/* Mission Section */
+	.mission-content {
+		background: var(--color-gray-100);
+		padding: 3rem;
+		border-radius: 12px;
+		text-align: center;
+	}
+
+	.mission-content h2 {
+		margin-bottom: 2rem;
+	}
+
+	blockquote {
+		font-size: 1.5rem;
+		font-style: italic;
+		color: var(--color-gray-700);
+		margin: 0 0 2rem 0;
+		line-height: 1.6;
+		quotes: """ """ "'" "'";
+	}
+
+	blockquote:before {
+		content: open-quote;
+	}
+
+	blockquote:after {
+		content: close-quote;
+	}
+
+	.mission-text {
+		font-size: 1.1rem;
+		color: var(--color-gray-600);
+		line-height: 1.7;
+		margin: 0;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	/* Stats Section */
+	.stats-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+	}
+
+	.stat-item {
+		text-align: center;
+		padding: 2rem;
+	}
+
+	.stat-number {
+		font-family: 'DynaPuff', cursive;
+		font-size: 3rem;
+		font-weight: 700;
+		color: var(--color-gray-900);
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-label {
+		font-size: 1.1rem;
+		color: var(--color-gray-600);
+		font-weight: 500;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.about-container {
+			padding: 3rem 1rem;
+		}
+
+		section {
+			margin-bottom: 3rem;
+		}
+
+		section h2 {
+			font-size: 2rem;
+		}
+
+		.story-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.story-image {
+			order: -1;
+		}
+
+		.story-image img {
+			height: 250px;
+		}
+
+		.values-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.team-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.mission-content {
+			padding: 2rem;
+		}
+
+		blockquote {
+			font-size: 1.2rem;
+		}
+
+		.stat-number {
+			font-size: 2.5rem;
+		}
+
+		.stats-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.stats-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.stat-item {
+			padding: 1rem;
+		}
+	}
+</style>
