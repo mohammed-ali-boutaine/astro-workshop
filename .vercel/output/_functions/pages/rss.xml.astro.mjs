@@ -1,5 +1,5 @@
 import rss from '@astrojs/rss';
-import { a as getCollection } from '../chunks/_astro_content_BOG9faMl.mjs';
+import { a as getCollection } from '../chunks/_astro_content_DA5OKawJ.mjs';
 import sanitizeHtml from 'sanitize-html';
 import MarkdownIt from 'markdown-it';
 export { renderers } from '../renderers.mjs';
@@ -10,7 +10,7 @@ async function GET(context) {
   const rssContent = await rss({
     title: "My Blog",
     description: "Latest posts from my blog",
-    site: context.site || "https://medali.me",
+    site: context.site || "https://astro-workshop-f18lrqfvg-mohammed-ali-boutaines-projects.vercel.app/",
     items: posts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.date,

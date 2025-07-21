@@ -1,21 +1,21 @@
 ---
 let feedbackMessage;
-if (Astro.request.method === 'POST') {
-	try {
-		const data = await Astro.request.formData();
-		const name = data.get('name');
-		const email = data.get('email');
-		const message = data.get('message');
-		const phone = data.get('phone') || '';
+// if (Astro.request.method === 'POST') {
+// 	try {
+// 		const data = await Astro.request.formData();
+// 		const name = data.get('name');
+// 		const email = data.get('email');
+// 		const message = data.get('message');
+// 		const phone = data.get('phone') || '';
 
-		feedbackMessage = `Thank you, ${name}! We have received your message: "${message}". We will get back to you at ${email} or ${
-			phone ? `call you at ${phone}` : 'your provided phone number'
-		}.`;
+// 		feedbackMessage = `Thank you, ${name}! We have received your message: "${message}". We will get back to you at ${email} or ${
+// 			phone ? `call you at ${phone}` : 'your provided phone number'
+// 		}.`;
 
-	} catch (error) {
-		console.error(error);
-	}
-}
+// 	} catch (error) {
+// 		console.error(error);
+// 	}
+// }
 ---
 
 <div class="contact-container">

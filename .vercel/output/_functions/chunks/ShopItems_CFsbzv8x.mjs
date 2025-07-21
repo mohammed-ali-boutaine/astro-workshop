@@ -2,7 +2,7 @@ import { c as createAstro, a as createComponent, m as maybeRenderHead, r as rend
 import 'kleur/colors';
 import { jsx } from 'react/jsx-runtime';
 import { useState } from 'react';
-import { a as addToCart } from './default_BzcFEWT5.mjs';
+import { a as addToCart } from './default_g9h4UWKE.mjs';
 /* empty css                         */
 
 function AddToCartButton({ product }) {
@@ -26,7 +26,7 @@ function AddToCartButton({ product }) {
   );
 }
 
-const $$Astro = createAstro("https://medali.me/");
+const $$Astro = createAstro("https://astro-workshop-f18lrqfvg-mohammed-ali-boutaines-projects.vercel.app/");
 const $$ShopItems = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$ShopItems;

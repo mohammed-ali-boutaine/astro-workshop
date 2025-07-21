@@ -3,7 +3,7 @@ import 'kleur/colors';
 import 'clsx';
 /* empty css                         */
 
-const $$Astro = createAstro("https://medali.me/");
+const $$Astro = createAstro("https://astro-workshop-f18lrqfvg-mohammed-ali-boutaines-projects.vercel.app/");
 const $$Hero = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Hero;

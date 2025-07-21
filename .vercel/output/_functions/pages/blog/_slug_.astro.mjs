@@ -1,11 +1,11 @@
 import { c as createAstro, a as createComponent, d as renderComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute } from '../../chunks/astro/server_DJA7yQRE.mjs';
 import 'kleur/colors';
-import { g as getEntryBySlug, a as getCollection } from '../../chunks/_astro_content_BOG9faMl.mjs';
-import { $ as $$Default } from '../../chunks/default_BzcFEWT5.mjs';
+import { g as getEntryBySlug, a as getCollection } from '../../chunks/_astro_content_DA5OKawJ.mjs';
+import { $ as $$Default } from '../../chunks/default_g9h4UWKE.mjs';
 /* empty css                                     */
 export { renderers } from '../../renderers.mjs';
 
-const $$Astro = createAstro("https://medali.me/");
+const $$Astro = createAstro("https://astro-workshop-f18lrqfvg-mohammed-ali-boutaines-projects.vercel.app/");
 async function getStaticPaths() {
   const blogEntries = await getCollection("blog");
   return blogEntries.map((entry) => ({

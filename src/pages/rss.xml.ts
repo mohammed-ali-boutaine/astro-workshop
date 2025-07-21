@@ -13,7 +13,7 @@ export async function GET(context : AstroConfig) {
   const rssContent = await rss({
     title: 'My Blog',
     description: 'Latest posts from my blog',
-    site: context.site || 'https://medali.me', 
+    site: context.site || 'https://astro-workshop-f18lrqfvg-mohammed-ali-boutaines-projects.vercel.app/', 
     items: posts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.date,

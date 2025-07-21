@@ -1,8 +1,8 @@
 import { a as createComponent, d as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_DJA7yQRE.mjs';
 import 'kleur/colors';
-import { $ as $$Default } from '../chunks/default_BzcFEWT5.mjs';
-import { $ as $$Hero } from '../chunks/Hero_DL3hGjA_.mjs';
-import { $ as $$ShopItems } from '../chunks/ShopItems_DyCodxhV.mjs';
+import { $ as $$Default } from '../chunks/default_g9h4UWKE.mjs';
+import { $ as $$Hero } from '../chunks/Hero_5QR6XYaW.mjs';
+import { $ as $$ShopItems } from '../chunks/ShopItems_CFsbzv8x.mjs';
 /* empty css                                    */
 export { renderers } from '../renderers.mjs';
 

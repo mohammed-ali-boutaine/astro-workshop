@@ -7,8 +7,8 @@ import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://medali.me/',
+  site: 'https://astro-workshop-f18lrqfvg-mohammed-ali-boutaines-projects.vercel.app/',
   integrations: [react()],
-  output: 'server',
+  // output: 'server',
   adapter: vercel()
 });

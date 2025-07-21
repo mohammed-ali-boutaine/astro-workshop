@@ -7,7 +7,7 @@ import { useStore } from '@nanostores/react';
 import { atom } from 'nanostores';
 import { useEffect } from 'react';
 
-const $$Astro$1 = createAstro("https://medali.me/");
+const $$Astro$1 = createAstro("https://astro-workshop-f18lrqfvg-mohammed-ali-boutaines-projects.vercel.app/");
 const $$Navigation = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Navigation;
@@ -207,7 +207,7 @@ function Cart() {
   ] });
 }
 
-const $$Astro = createAstro("https://medali.me/");
+const $$Astro = createAstro("https://astro-workshop-f18lrqfvg-mohammed-ali-boutaines-projects.vercel.app/");
 const $$Default = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Default;

@@ -1,8 +1,8 @@
 import { a as createComponent, d as renderComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute } from '../chunks/astro/server_DJA7yQRE.mjs';
 import 'kleur/colors';
-import { a as getCollection } from '../chunks/_astro_content_BOG9faMl.mjs';
-import { $ as $$Default } from '../chunks/default_BzcFEWT5.mjs';
-import { $ as $$Hero } from '../chunks/Hero_DL3hGjA_.mjs';
+import { a as getCollection } from '../chunks/_astro_content_DA5OKawJ.mjs';
+import { $ as $$Default } from '../chunks/default_g9h4UWKE.mjs';
+import { $ as $$Hero } from '../chunks/Hero_5QR6XYaW.mjs';
 /* empty css                                 */
 export { renderers } from '../renderers.mjs';
 
