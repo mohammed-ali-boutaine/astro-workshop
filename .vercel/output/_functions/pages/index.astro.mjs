@@ -1,0 +1,25 @@
+import { a as createComponent, d as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_DJA7yQRE.mjs';
+import 'kleur/colors';
+import { $ as $$Default } from '../chunks/default_BzcFEWT5.mjs';
+import { $ as $$ShopItems } from '../chunks/ShopItems_DyCodxhV.mjs';
+import { $ as $$ContactSection } from '../chunks/ContactSection_2JveaGv-.mjs';
+/* empty css                                 */
+export { renderers } from '../renderers.mjs';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "Layout", $$Default, { "data-astro-cid-j7pv25f6": true }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="header hero" data-astro-cid-j7pv25f6> <div class="cta" data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>Welcome to Savory</h1> <p class="lede" data-astro-cid-j7pv25f6>the Worlds leading sandwichestrust Savory</p> <a href="/shop" class="big-link" data-astro-cid-j7pv25f6>Shop Sandwich Kits</a> </div> <img src="hero-image.png" alt="" class="hero-image" decoding="async" data-astro-cid-j7pv25f6> </section>  <section class="shop-items  products" data-astro-cid-j7pv25f6> <h2 class="section-title" data-astro-cid-j7pv25f6>Shop Sandwich Kits</h2> ${renderComponent($$result2, "ShopItems", $$ShopItems, { "count": 3, "addToCartButton": false, "data-astro-cid-j7pv25f6": true })} <p class="shop-link" data-astro-cid-j7pv25f6><a href="/shop" data-astro-cid-j7pv25f6>Shop All Sandwich Kits &rarr;</a></p> </section>  <section class="home-cta" data-astro-cid-j7pv25f6> <div class="cta-container" data-astro-cid-j7pv25f6> <div class="cta-content" data-astro-cid-j7pv25f6> <h2 data-astro-cid-j7pv25f6>Ready to Master the Art of Sandwich Making?</h2> <p data-astro-cid-j7pv25f6>Join thousands of home cooks who've transformed their kitchens with our expert-curated ingredients and step-by-step recipes. From artisan breads to premium meats, we deliver everything you need to create restaurant-quality sandwiches at home.</p> <div class="cta-buttons" data-astro-cid-j7pv25f6> <a href="/shop" class="cta-primary" data-astro-cid-j7pv25f6>Start Cooking Today</a> <a href="/blog" class="cta-secondary" data-astro-cid-j7pv25f6>Explore Recipes</a> </div> </div> <div class="cta-features" data-astro-cid-j7pv25f6> <div class="feature" data-astro-cid-j7pv25f6> <div class="feature-icon" data-astro-cid-j7pv25f6> <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-astro-cid-j7pv25f6> <path d="M3 11v3a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-3" data-astro-cid-j7pv25f6></path> <path d="M12 19H4a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-8Z" data-astro-cid-j7pv25f6></path> <path d="m8 8 4-4 4 4" data-astro-cid-j7pv25f6></path> </svg> </div> <h3 data-astro-cid-j7pv25f6>Artisan Ingredients</h3> <p data-astro-cid-j7pv25f6>Carefully sourced from local farms and specialty producers</p> </div> <div class="feature" data-astro-cid-j7pv25f6> <div class="feature-icon" data-astro-cid-j7pv25f6> <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-astro-cid-j7pv25f6> <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-astro-cid-j7pv25f6></path> <polyline points="14,2 14,8 20,8" data-astro-cid-j7pv25f6></polyline> <line x1="16" y1="13" x2="8" y2="13" data-astro-cid-j7pv25f6></line> <line x1="16" y1="17" x2="8" y2="17" data-astro-cid-j7pv25f6></line> <polyline points="10,9 9,9 8,9" data-astro-cid-j7pv25f6></polyline> </svg> </div> <h3 data-astro-cid-j7pv25f6>Expert Recipes</h3> <p data-astro-cid-j7pv25f6>Chef-tested instructions for perfect results every time</p> </div> <div class="feature" data-astro-cid-j7pv25f6> <div class="feature-icon" data-astro-cid-j7pv25f6> <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-astro-cid-j7pv25f6> <path d="M1 3h15l-1 9H3L1 3Z" data-astro-cid-j7pv25f6></path> <path d="m16 8 2 8 4-8" data-astro-cid-j7pv25f6></path> <circle cx="7" cy="21" r="1" data-astro-cid-j7pv25f6></circle> <circle cx="17" cy="21" r="1" data-astro-cid-j7pv25f6></circle> </svg> </div> <h3 data-astro-cid-j7pv25f6>Fresh Delivery</h3> <p data-astro-cid-j7pv25f6>Ingredients delivered fresh to your door when you need them</p> </div> </div> </div> </section>  <section class="contact-section-wrapper" data-astro-cid-j7pv25f6> <h1 class="section-title" data-astro-cid-j7pv25f6>Contact</h1> ${renderComponent($$result2, "ContactSection", $$ContactSection, { "data-astro-cid-j7pv25f6": true })} </section> ` })} `;
+}, "C:/Users/ali/Desktop/projects/astro-frontend-masters/src/pages/index.astro", void 0);
+
+const $$file = "C:/Users/ali/Desktop/projects/astro-frontend-masters/src/pages/index.astro";
+const $$url = "";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+	__proto__: null,
+	default: $$Index,
+	file: $$file,
+	url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

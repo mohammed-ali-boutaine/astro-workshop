@@ -1,91 +1,33 @@
 ---
 import Layout from '../layouts/default.astro';
 import Hero from '../components/Hero.astro';
+
+const subTitle = `The history of sndwch is the history of all of us, really. Who among us hasn’t set bravely forth to challenge the boundaries that limited those who came before us? Who hasn’t felt the call to shed the senseless burdens of previous generations and embrace a brighter, happier, more unified future?
+
+At sndwch, we believe in bringing people together. The overly restrictive labels of our past have divided us for too long.
+
+Forget the labels. You don’t need to stand alone. Explore a new world of joyful, unburdened flavors.
+
+Because when you’re here, just about everything can be a sandwich.`
 ---
 
 <Layout>
 	<div class="about-page">
 		<Hero 
 			title="About Savory" 
-			subtitle="Crafting exceptional sandwiches with passion, quality ingredients, and a commitment to flavor perfection since 2017." 
+			subtitle={subTitle} 
 		/>
 
 		<div class="about-container">
 			<section class="story-section">
-				<h2>Our Story</h2>
+				<!-- <h2>About sndwch</h2> -->
 				<div class="story-content">
-					<div class="story-text">
-						<p>
-							Founded in 2017 by a group of culinary enthusiasts, Savory began as a simple dream: to create the perfect sandwich. What started in a small kitchen has grown into a passionate mission to bring exceptional flavors to sandwich lovers everywhere.
-						</p>
-						<p>
-							Our journey began when chef Roberto Silva, fresh from culinary school, met local farmer Maria Rodriguez at a weekend farmers market. Their shared passion for quality ingredients and authentic flavors sparked the idea for Savory - a place where traditional techniques meet innovative flavors.
-						</p>
-						<p>
-							Today, we continue to honor that original vision by sourcing the finest ingredients, perfecting our recipes, and sharing our love for great food with our community.
-						</p>
-					</div>
-					<div class="story-image">
-						<img src="/sandwich-hero.jpg" alt="Fresh sandwich ingredients being prepared" loading="lazy" />
-					</div>
+
+
+
 				</div>
 			</section>
 
-			<section class="values-section">
-				<h2>Our Values</h2>
-				<div class="values-grid">
-					<div class="value-item">
-						<div class="value-icon">🌱</div>
-						<h3>Quality Ingredients</h3>
-						<p>We source only the finest, freshest ingredients from local farms and trusted suppliers. Every component matters in creating the perfect sandwich.</p>
-					</div>
-					<div class="value-item">
-						<div class="value-icon">👨‍🍳</div>
-						<h3>Culinary Excellence</h3>
-						<p>Our chefs bring years of experience and passion to every recipe, constantly innovating while respecting traditional techniques.</p>
-					</div>
-					<div class="value-item">
-						<div class="value-icon">🌍</div>
-						<h3>Community Focus</h3>
-						<p>We believe in supporting our local community, from sourcing ingredients locally to creating jobs and fostering connections.</p>
-					</div>
-					<div class="value-item">
-						<div class="value-icon">♻️</div>
-						<h3>Sustainability</h3>
-						<p>Environmental responsibility guides our practices, from eco-friendly packaging to minimizing food waste.</p>
-					</div>
-				</div>
-			</section>
-
-			<section class="team-section">
-				<h2>Meet Our Team</h2>
-				<div class="team-grid">
-					<div class="team-member">
-						<div class="member-photo">
-							<div class="placeholder-photo">RS</div>
-						</div>
-						<h3>Roberto Silva</h3>
-						<p class="role">Head Chef & Co-Founder</p>
-						<p>With 15 years of culinary experience, Roberto brings innovation and passion to every recipe. His specialty is creating unique flavor combinations that surprise and delight.</p>
-					</div>
-					<div class="team-member">
-						<div class="member-photo">
-							<div class="placeholder-photo">MR</div>
-						</div>
-						<h3>Maria Rodriguez</h3>
-						<p class="role">Operations Manager & Co-Founder</p>
-						<p>Maria ensures quality at every step, from ingredient sourcing to customer experience. Her attention to detail keeps Savory running smoothly.</p>
-					</div>
-					<div class="team-member">
-						<div class="member-photo">
-							<div class="placeholder-photo">DT</div>
-						</div>
-						<h3>David Thompson</h3>
-						<p class="role">Pastry Chef</p>
-						<p>David crafts our artisanal breads and pastries daily. His background in European baking techniques adds an authentic touch to our offerings.</p>
-					</div>
-				</div>
-			</section>
 
 			<section class="mission-section">
 				<div class="mission-content">

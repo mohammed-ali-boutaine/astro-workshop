@@ -1,0 +1,23 @@
+---
+// export const prerender = false;
+import Layout from '../layouts/default.astro';
+import Hero from '../components/Hero.astro';
+import ContactSection from '../components/ContactSection.astro';
+---
+
+<Layout>
+	<div class="contact-page">
+		<Hero
+			title="Get in Touch"
+			subtitle="Have questions about our sandwiches? Want to collaborate? We'd love to hear from you!"
+		/>
+
+		<ContactSection />
+	</div>
+</Layout>
+
+<style>
+	.contact-page {
+		min-height: 80vh;
+	}
+</style>
