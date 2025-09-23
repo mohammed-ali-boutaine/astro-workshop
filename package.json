@@ -2,6 +2,7 @@
 	"name": "astro-frontend-masters",
 	"type": "module",
 	"version": "0.0.1",
+	"description": "A modern e-commerce website for artisan sandwich kits built with Astro, featuring server-side rendering, state management, and interactive components",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",

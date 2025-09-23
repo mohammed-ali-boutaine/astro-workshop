@@ -7,6 +7,9 @@ dist/
 # netlify stuff
 .netlify/
 
+# vercel build output
+.vercel/
+
 # dependencies
 node_modules/
 
